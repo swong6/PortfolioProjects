@@ -5,13 +5,13 @@ order by 3,4
 --select * from PortfolioProject..CovidVaccinations
 --order by 3,4
 
--- select data that we are going to be using 
+-- Select data that we are going to be using 
 
 select location, date, total_cases, new_cases, total_deaths, population 
 from PortfolioProject..CovidDeaths
 order by 1,2
 
---- looking at total cases vs total deaths
+--- Looking at total cases vs total deaths
 -- Shows likelihood of dying if you contract covid in your country
 SELECT location, date, total_cases, total_deaths , (total_deaths/total_cases)*100 as DeathPercentage
 FROM PortfolioProject..CovidDeaths
@@ -90,7 +90,7 @@ select *, (RollingPeopleVaccinated/Population)*100
 from PopvsVac
 
 --TEMP TABLE
-Drop Table if exists #PercentPopulationVaccinated --- adding this when making alterations, no need to delete view/ its built in and easy to maintain / EVERYONE does this
+Drop Table if exists #PercentPopulationVaccinated 
 Create table #PercentPopulationVaccinated
 (
 Continent nvarchar(255),
@@ -131,6 +131,6 @@ WHERE dea.continent is NOT NULL
 --ORDER BY 2,3
 
 Select * 
-from PercentPopulationVaccinated -- use as visualization later on with the views, it is permanent / call them as work view or table to set aside to use consistently
+from PercentPopulationVaccinated 
 
 
