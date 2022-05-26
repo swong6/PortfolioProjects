@@ -1,7 +1,7 @@
 /*
 Sale Data Exploration
 
-Skills used: Aggregate Functions, Window Functions, Sub Query, CTEs, XML Path Function, Tableau
+Skills used: Aggregate Functions, Window Functions, Sub Query, CTEs, RFM Analysis, XML Path Function
 
 */
 
